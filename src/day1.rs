@@ -1,4 +1,5 @@
-use crate::util::{print_part_1, print_part_2, read_lines};
+use crate::util::{print_part_1, print_part_2};
+use std::fs::read_to_string;
 use std::time::Instant;
 
 fn count_rising_in_window_of_2(values: &[usize]) -> usize {
@@ -21,39 +22,13 @@ fn count_rising_sum_in_window_of_3(values: &[usize]) -> usize {
     )
 }
 
-fn get_input() -> Result<Vec<usize>, std::io::Error> {
-    match read_lines("inputs/day1.txt") {
-        Ok(input_str) =>
-        // https://stackoverflow.com/a/30608280
-        {
-            Ok(input_str
-                .map(|line| match line {
-                    Ok(s) => match s.parse() {
-                        Ok(num) => num,
-                        Err(_) => {
-                            println!("Could not convert line {} to usize", s);
-                            0
-                        }
-                    },
-                    Err(_) => {
-                        println!("Invalid line read from file");
-                        0
-                    }
-                })
-                .collect())
-        }
-        Err(e) => Err(e),
-    }
-}
-
 pub fn main() {
-    let input: Vec<usize> = match get_input() {
-        Ok(s) => s,
-        Err(e) => {
-            eprintln!("ERR: {}", e);
-            return;
-        }
-    };
+    let input: Vec<usize> = read_to_string("inputs/day2.txt")
+        .expect("Input not found..")
+        .lines()
+        .map(|line| line.parse::<usize>().expect("Could not decode input.."))
+        .collect();
+
     // PART 1
     let start = Instant::now();
     let known_answer = "1692";
