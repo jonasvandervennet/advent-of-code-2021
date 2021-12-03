@@ -4,6 +4,7 @@ mod util; // https://users.rust-lang.org/t/modules-what-am-i-doing-wrong/35186/2
 
 mod day1;
 mod day2;
+mod day3;
 
 // https://docs.rs/structopt/0.3.20/structopt/#how-to-derivestructopt
 #[derive(StructOpt)]
@@ -26,7 +27,7 @@ fn print_day_header(day: usize) {
 
 fn main() {
     let args = Opt::from_args();
-    let mains = [day1::main, day2::main];
+    let mains = [day1::main, day2::main, day3::main];
 
     match args.day.as_str() {
         "all" => {

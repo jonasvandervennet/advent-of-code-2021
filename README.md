@@ -33,6 +33,8 @@ cargo run -- --day 1
 caveat: there is a lot of room left for improvements!
 |  *DAY* |  *PART 1* |  *PART 2*  |
 |---|---|---|
-| 1  | **1.1µs**  | **13µs**  |
+| 1  | **900ns**  | **5.6µs**  |
+| 2  | **4.6µs**  | **5.2µs**  |
+| 3  | **23.7µs**  | **509.7µs**  |
 
 Thanks [MrRobb](https://github.com/MrRobb/advent-of-code-2019) for the clean project structure!
