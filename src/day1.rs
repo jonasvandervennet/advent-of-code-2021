@@ -63,7 +63,7 @@ pub fn main() {
 
     // PART 2
     let start = Instant::now();
-    let known_answer = "244300320";
+    let known_answer = "1724";
     let part_2: usize = count_rising_sum_in_window_of_3(&input);
     let duration = start.elapsed();
     print_part_2(&part_2.to_string(), &known_answer, duration);
