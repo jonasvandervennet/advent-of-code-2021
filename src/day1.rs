@@ -23,7 +23,7 @@ fn count_rising_sum_in_window_of_3(values: &[usize]) -> usize {
 }
 
 pub fn main() {
-    let input: Vec<usize> = read_to_string("inputs/day2.txt")
+    let input: Vec<usize> = read_to_string("inputs/day1.txt")
         .expect("Input not found..")
         .lines()
         .map(|line| line.parse::<usize>().expect("Could not decode input.."))
