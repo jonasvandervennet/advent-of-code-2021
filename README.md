@@ -35,6 +35,7 @@ caveat: there is a lot of room left for improvements!
 |---|---|---|
 | 1  | **900ns**  | **5.6µs**  |
 | 2  | **4.6µs**  | **5.2µs**  |
-| 3  | **23.7µs**  | **509.7µs**  |
+| 3  | **9.4µs**  | **509.7µs**  |
+| 4  | **205.6µs**  | **1.4965ms**  |
 
 Thanks [MrRobb](https://github.com/MrRobb/advent-of-code-2019) for the clean project structure!
