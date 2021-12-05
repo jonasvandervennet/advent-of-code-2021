@@ -118,6 +118,7 @@ mod tests {
             parse_input(&read_to_string("inputs/day4_test.txt").expect("Input not found.."));
         assert_eq!(play_bingo(&numbers, &boards, true), 4512);
     }
+
     #[test]
     fn test_example_2() {
         let (numbers, boards) =
